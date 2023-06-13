@@ -1,6 +1,7 @@
 import io.qameta.allure.junit4.DisplayName;
 import authorization.LoginPage;
 import main.MainPage;
+import org.junit.After;
 import recover.PasswordRecoverPage;
 import registration.RegistrationPage;
 import org.junit.Before;
@@ -17,6 +18,12 @@ public class TestAuthorization {
         driver = new ChromeDriver();
         driver.get("https://stellarburgers.nomoreparties.site/");
     }
+
+    @After
+    public void tearDown() {
+        driver.quit();
+    }
+
     @Test
     @DisplayName("Авторизация существующего пользователя по кнопке с основной страницы")
     public void testCorrectAuthorizationByButtonInMainPageInChrome() {

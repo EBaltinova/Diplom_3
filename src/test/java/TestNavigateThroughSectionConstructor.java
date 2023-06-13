@@ -19,7 +19,7 @@ public class TestNavigateThroughSectionConstructor {
         MainPage objMainPage = new MainPage(driver);
         objMainPage.clickTubToppingsInHeader();
         objMainPage.clickTubBunInHeader();
-        String actualTextFromBunHeader = objMainPage.getTextBunHeader();
+        String actualTextFromBunHeader = objMainPage.getCurrentTub();
         String expectedTextFromBunHeader = "Булки";
         assertEquals("Должна появиться надпись 'Булки'", expectedTextFromBunHeader, actualTextFromBunHeader);
     }
@@ -28,7 +28,7 @@ public class TestNavigateThroughSectionConstructor {
     public void testCorrectNavigateInSauceTubInChrome() {
         MainPage objMainPage = new MainPage(driver);
         objMainPage.clickTubSauceInHeader();
-        String actualTextFromSauceHeader = objMainPage.getTextSauceHeader();
+        String actualTextFromSauceHeader = objMainPage.getCurrentTub();
         String expectedTextFromSauceHeader = "Соусы";
         assertEquals("Должна появиться надпись 'Соусы'", expectedTextFromSauceHeader, actualTextFromSauceHeader);
     }
@@ -37,7 +37,7 @@ public class TestNavigateThroughSectionConstructor {
     public void testCorrectNavigateInToppingsTubInChrome() {
         MainPage objMainPage = new MainPage(driver);
         objMainPage.clickTubToppingsInHeader();
-        String actualTextFromToppingsHeader = objMainPage.getTextToppingsHeader();
+        String actualTextFromToppingsHeader = objMainPage.getCurrentTub();
         String expectedTextFromToppingsHeader = "Начинки";
         assertEquals("Должна появиться надпись 'Начинки'", expectedTextFromToppingsHeader, actualTextFromToppingsHeader);
     }
